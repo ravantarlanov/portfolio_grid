@@ -1,0 +1,379 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #fff;
+    color: #000;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 2px solid #333;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+}
+
+nav ul li {
+    position: relative;
+    padding: 10px 20px;
+}
+
+nav ul li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: #333;
+    transform: skew(-20deg); /* creates the diagonal divider */
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 40px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.about-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* Left & Right Photos */
+.about-images .photo img {
+    width: 250px;     /* match your chosen width */
+    height: 320px;    /* match your chosen height */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Middle Profile */
+.about-images .profile img {
+    width: 250px;     /* same width */
+    height: 350px;    /* taller, stands out */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#about p {
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 18px;   /* bigger than default */
+    line-height: 1.8;  /* more breathing room */
+    color: #444;
+    text-align: center;
+}
+
+
+.education-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 60px;   
+    margin-top: 30px; 
+}
+
+
+.education-boxes .box {
+    border: 1px solid black;
+    padding: 20px;
+    width: 200px;
+}
+
+.work {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px auto;
+    width: 60%;
+}
+
+.blog-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.blog-image {
+    width: 200px;
+    height: 200px;
+    background: orange;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#blog {
+    padding: 40px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.blog-post {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 70%;
+    max-width: 800px;
+    text-align: left;
+    gap: 20px;
+}
+
+.blog-image img {
+    width: 200px;
+    height: 150px;
+    border-radius: 6px;
+    object-fit: cover; 
+    flex-shrink: 0;
+}
+
+.blog-text {
+    flex: 1;
+}
+
+.blog-text h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.blog-text p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+    width: 50%;
+    margin: auto;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #333;
+    width: 100%;
+}
+
+form button {
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background: #222; /* darker background */
+    color: #eee;      /* light text */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0 10px;
+}
+
+footer a {
+    color: #007bff; /* bright blue for links */
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: #0056b3; /* darker blue on hover */
+    text-decoration: underline;
+}
+
+#testimonials {
+    padding: 50px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+}
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #007bff;
+    margin: 0 auto 15px auto;
+}
+
+.testimonial-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.testimonial-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+#experience {
+    padding: 50px;
+    background: #fff;
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    margin: 40px auto;
+    padding: 20px 0;
+    width: 80%;
+    border-left: 3px solid #007bff;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 40px;
+    text-align: left;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -11px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.timeline-content {
+    background: #f9f9f9;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.timeline-content h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.timeline-content span {
+    display: block;
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0 10px;
+}
+
+.timeline-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+#projects {
+    padding: 50px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.projects-grid {
+    display: flex;
+    flex-direction: column;   
+    gap: 30px;                
+    align-items: center;      
+}
+
+.project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 70%;  
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
