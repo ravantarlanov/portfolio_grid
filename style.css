@@ -20,6 +20,7 @@ header h1 {
   margin: 0 0 15px;
 }
 
+/* Desktop nav menu */
 nav ul {
   list-style: none;
   margin: 0;
@@ -32,13 +33,27 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #C3E0E5;;
+  color: #C3E0E5;
   font-weight: bold;
 }
 
 nav ul li a:hover {
   text-decoration: underline;
   color: #ffffff;
+}
+
+/* Hide checkbox (menu toggle) */
+#menu-toggle {
+  display: none;
+}
+
+/* Hamburger icon (hidden on desktop) */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: #C3E0E5;
+  cursor: pointer;
+  padding: 10px;
 }
 
 /* === Section Defaults === */
@@ -258,22 +273,22 @@ footer nav a:hover {
   color: #ffffff;
 }
 
-/* Hide checkbox */
-#menu-toggle {
-  display: none;
-}
-
-/* Menu icon */
-.menu-icon {
-  display: none;
-  font-size: 28px;
-  color: #C3E0E5;
-  cursor: pointer;
-  padding: 10px;
-}
-
-/* Mobile screens */
+/* === Responsive (Mobile < 500px) === */
 @media (max-width: 500px) {
+  /* Stack sections */
+  .about-grid,
+  .edu-grid,
+  .projects-grid,
+  .testimonial-grid,
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  /* Mobile nav menu */
   nav ul {
     display: none; 
     grid-auto-flow: row;
@@ -282,7 +297,7 @@ footer nav a:hover {
     border-radius: 6px;
   }
 
-  /* Show menu */
+  /* Show hamburger icon */
   .menu-icon {
     display: block;
     margin-left: auto;
